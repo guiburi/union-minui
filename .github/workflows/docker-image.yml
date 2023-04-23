@@ -12,6 +12,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build Toolchain
-      run: docker build -t local < .toolchain/Dockerfile
+      run: docker build -t local < toolchain/Dockerfile
     - name: Run Make
       run: docker run -it -v $PWD:/root/workspace local make
